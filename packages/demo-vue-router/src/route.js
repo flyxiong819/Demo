@@ -1,0 +1,9 @@
+
+
+const routes = [
+  {
+    path: '/abc',
+
+  }
+];
+
