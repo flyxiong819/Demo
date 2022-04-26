@@ -1,0 +1,181 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "ast",
+      "version": "1.0.0",
+      "main": "index.js",
+      "license": "MIT",
+      "dependencies": {
+        "@tencent/wphk-bi-sdk": "^0.0.37",
+        "fs-extra": "^10.0.1",
+        "typescript": "^4.6.3",
+        "vue": "^3.2.31"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.17.7",
+        "@babel/parser": "^7.17.8",
+        "@babel/traverse": "^7.17.3",
+        "@babel/types": "^7.17.0",
+        "@types/fs-extra": "^9.0.13"
+      }
+    },
+    "prefix": "/Users/jensonchen/web/github/Demo/packages/ast"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/Users/jensonchen/.pnpm-store/v3",
+    "virtualStoreDir": "/Users/jensonchen/web/github/Demo/packages/ast/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/Users/jensonchen/web/github/Demo/packages/ast",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/fs-extra/10.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "fs-extra",
+      "rawSpec": "^10.0.1"
+    }
+  },
+  "5 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/fs-extra/10.1.0",
+    "requester": "/Users/jensonchen/web/github/Demo/packages/ast",
+    "status": "resolved"
+  },
+  "6 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/fs-extra/9.0.13",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@types/fs-extra",
+      "rawSpec": "^9.0.13"
+    }
+  },
+  "7 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/fs-extra/9.0.13",
+    "requester": "/Users/jensonchen/web/github/Demo/packages/ast",
+    "status": "resolved"
+  },
+  "8 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/types/7.17.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@babel/types",
+      "rawSpec": "^7.17.0"
+    }
+  },
+  "9 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/types/7.17.0",
+    "requester": "/Users/jensonchen/web/github/Demo/packages/ast",
+    "status": "resolved"
+  },
+  "10 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/parser/7.17.9",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@babel/parser",
+      "rawSpec": "^7.17.8"
+    }
+  },
+  "11 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/parser/7.17.9",
+    "requester": "/Users/jensonchen/web/github/Demo/packages/ast",
+    "status": "resolved"
+  },
+  "12 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/fs-extra/10.1.0",
+    "size": 16920,
+    "status": "started"
+  },
+  "13 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/generator/7.17.9",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@babel/generator",
+      "rawSpec": "^7.17.7"
+    }
+  },
+  "14 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/generator/7.17.9",
+    "requester": "/Users/jensonchen/web/github/Demo/packages/ast",
+    "status": "resolved"
+  },
+  "15 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/types/7.17.0",
+    "requester": "/Users/jensonchen/web/github/Demo/packages/ast",
+    "status": "found_in_store"
+  },
+  "16 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/parser/7.17.9",
+    "requester": "/Users/jensonchen/web/github/Demo/packages/ast",
+    "status": "found_in_store"
+  },
+  "17 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/generator/7.17.9",
+    "requester": "/Users/jensonchen/web/github/Demo/packages/ast",
+    "status": "found_in_store"
+  },
+  "18 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/fs-extra/10.1.0",
+    "requester": "/Users/jensonchen/web/github/Demo/packages/ast",
+    "status": "fetched"
+  },
+  "19 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/vue/3.2.33",
+    "wanted": {
+      "dependentId": ".",
+      "name": "vue",
+      "rawSpec": "^3.2.31"
+    }
+  },
+  "20 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue/3.2.33",
+    "requester": "/Users/jensonchen/web/github/Demo/packages/ast",
+    "status": "resolved"
+  },
+  "21 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/traverse/7.17.9",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@babel/traverse",
+      "rawSpec": "^7.17.3"
+    }
+  },
+  "22 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/traverse/7.17.9",
+    "requester": "/Users/jensonchen/web/github/Demo/packages/ast",
+    "status": "resolved"
+  },
+  "23 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/traverse/7.17.9",
+    "requester": "/Users/jensonchen/web/github/Demo/packages/ast",
+    "status": "found_in_store"
+  },
+  "24 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue/3.2.33",
+    "requester": "/Users/jensonchen/web/github/Demo/packages/ast",
+    "status": "found_in_store"
+  },
+  "25 error pnpm": {
+    "code": "ERR_PNPM_FETCH_404",
+    "hint": "@tencent/wphk-bi-sdk is not in the npm registry, or you have no permission to fetch it.\n\nNo authorization header was set for the request.",
+    "request": {
+      "url": "https://registry.npmjs.org/@tencent%2Fwphk-bi-sdk"
+    },
+    "response": {
+      "size": 0
+    },
+    "pkgName": "@tencent/wphk-bi-sdk",
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "GET https://registry.npmjs.org/@tencent%2Fwphk-bi-sdk: Not Found - 404",
+      "code": "ERR_PNPM_FETCH_404",
+      "stack": "pnpm: GET https://registry.npmjs.org/@tencent%2Fwphk-bi-sdk: Not Found - 404\n    at RetryOperation._fn (/Users/jensonchen/.nvm/versions/node/v16.4.2/lib/node_modules/pnpm/dist/pnpm.cjs:85375:19)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    }
+  }
+}

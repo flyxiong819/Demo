@@ -1,0 +1,22 @@
+lockfileVersion: 5.3
+
+specifiers:
+  ntypescript: ^1.201706190042.1
+  typescript: ^4.6.3
+
+dependencies:
+  ntypescript: 1.201706190042.1
+  typescript: 4.6.3
+
+packages:
+
+  /ntypescript/1.201706190042.1:
+    resolution: {integrity: sha1-hmrpzDZoixQWBhVu0LzDXN9TYnE=}
+    hasBin: true
+    dev: false
+
+  /typescript/4.6.3:
+    resolution: {integrity: sha512-yNIatDa5iaofVozS/uQJEl3JRWLKKGJKh6Yaiv0GLGSuhpFJe7P3SbHZ8/yjAHRQwKRoA6YZqlfjXWmVzoVSMw==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: false
