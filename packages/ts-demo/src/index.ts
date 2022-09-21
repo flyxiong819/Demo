@@ -1,11 +1,6 @@
-import { lengthOfLongestSubstring } from './longest-substring';
+// import { main as  longestSubstring} from './longest-substring';
+// longestSubstring();
+import * as anim from 'animejs'
 
-const input = [
-
-];
-
-function main() {
-  input.forEach(item => {
-
-  });
-}
+import { main as medianSortedArray } from './median-sorted-array';
+medianSortedArray();

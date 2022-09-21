@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "exceljs": "^4.3.0"
   }
 }
