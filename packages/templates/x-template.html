@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>x-template模板</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <select>
+      <option is="optioncomp"></option>
+    </select>
+  </div>
+
+  <!-- 模板内容 -->
+  <script type="text/x-template" id="optioncompTemp">
+    <optgroup>
+      <option>选项a</option>
+      <option>选项b</option>
+    </optgroup>
+  </script>
+
+  <script>
+    new Vue({
+      el: '#app',
+      components: {
+        'optioncomp': {
+          template: '#optioncompTemp'
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>html模板</title>
+</head>
+<body>
+  <div id="app">
+    Hello Vue!
+    <my-component></my-component>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script>
+    // 全局注册
+    Vue.component('my-component', {
+      template: '<div>我是html模板组件</div>'
+    });
+    new Vue({
+      el: '#app'
+    });
+  </script>
+</body>
+</html>

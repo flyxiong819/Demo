@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>字符串模板</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+  <div id="template"></div>
+  <script>
+    // 全局组件，用的是字符串模板
+    Vue.component('MyComponent', {
+      props: ['param'],
+      template: `<div>自定义组件，param： {{param}}</div>`
+    });
+    new Vue({
+      el: '#template',
+      data: {
+        name: '东海',
+      },
+      components: {
+        // 局部组件，用的是字符串模板
+        'seCom': {
+          props: ['param'],
+          template: `<div>我是第二个组件，param：{{param}}</div>`
+        }
+      },
+      // 内联字符串模板（属于字符串模板）
+      template: `
+        <ol>
+          <tr is="MyComponent" :param="name"></tr>
+          <se-com :param="name"></se-com> <!-- 因为这个，被称为内联 -->
+        </ol>
+      `
+    });
+  </script>
+</body>
+</html>
