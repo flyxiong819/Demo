@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      const app = document.querySelector('#app');
+
+      const num = document.createElement('div');
+      const button = document.createElement('button');
+
+      let i = 0;
+      let numText = document.createTextNode(i);
+      const buttonText = document.createTextNode('加一');
+      
+      num.appendChild(numText);
+      button.appendChild(buttonText);
+      button.onclick = () => {
+        num.removeChild(numText);
+        i++;
+        numText = document.createTextNode(i);
+        num.appendChild(numText);
+      }
+      
+      app.appendChild(num);
+      app.appendChild(button);
+    </script>
+  </body>
+</html>
