@@ -27,6 +27,7 @@ const store = useLocalStorage(
     color: 'red',
   },
 )
+console.log('store', store);
 
 console.log('def', props.title);
 const nested = {
@@ -41,13 +42,13 @@ const plusOne = computed({
   }
 }, {
   onTrigger() {
-    debugger;
     console.log('zenchen on trigger');
   },
   onTrack() {
     console.log('zenchen on track');
   }
 })
+console.log(plusOne.value);
 
 watchEffect(() => {
   console.log('zenchen', nested.count.value + count.value);
@@ -69,13 +70,17 @@ numbers.push(5) // logs: [1,2,3,4,5] [1,2,3,4]
 <template>
   <div>
     <span>my title: {{ title }}/{{ props.title }}. my count:{{ count }}</span>
-    <br />
-    <span>{{nested.count.value}}</span>
-    <br />
-    <button @click="count ++">Increment count</button>
-    <button @click="nested.count.value ++">Nested Increment count</button>
-    <br />
-    <div>(x,y)=({{x}},{{y}})</div>
+    <br>
+    <span>{{ nested.count.value }}</span>
+    <br>
+    <button @click="count ++">
+      Increment count
+    </button>
+    <button @click="nested.count.value ++">
+      Nested Increment count
+    </button>
+    <br>
+    <div>(x,y)=({{ x }},{{ y }})</div>
     <div>isDark: {{ isDark }}</div>
   </div>
 </template>

@@ -1,6 +1,13 @@
 <template>
-  <div class="cattrs" @click="onClick">测试attrs透传</div>
-  <div class="multi">多根节点</div>
+  <div
+    class="cattrs"
+    @click="onClick"
+  >
+    测试attrs透传
+  </div>
+  <div class="multi">
+    多根节点
+  </div>
 </template>
 
 <script setup lang="ts">

@@ -1,5 +1,7 @@
 <template>
-  <div class="vmodel">{{ value }}</div>
+  <div class="vmodel">
+    {{ value }}
+  </div>
 </template>
 
 <script setup lang="ts">

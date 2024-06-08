@@ -1,27 +1,43 @@
 
 <template>
   <div>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <MyComp @click="abc"></MyComp>
-    <HelloWorld msg="Vue 3 + TypeScript + Vite" title="zenchen" />
+    <img
+      alt="Vue logo"
+      src="./assets/logo.png"
+    >
+    <MyComp @click="abc" />
+    <HelloWorld
+      msg="Vue 3 + TypeScript + Vite"
+      title="zenchen"
+    />
     <NoSetup>
-      <div class="" style="color: red;">test</div>
+      <div
+        class=""
+        style="color: red;"
+      >
+        test
+      </div>
       <template #test>
         <div>传入具名插槽</div>
       </template>
-      <div style="color: blue;">传入default插槽</div>
+      <div style="color: blue;">
+        传入default插槽
+      </div>
     </NoSetup>
-    <Vmodel></Vmodel>
+    <Vmodel />
     <Attrs  
       class="tclass"
       style="color: red;"
       @click="console.log('father click')"
-      @tt="console.log('father tt')"></Attrs>
+      @tt="console.log('father tt')"
+    />
 
     <Vslot>
       <div>test default1</div>
       <template #header>
-        <div class="">test header</div>
+        <div class="">
+          test header
+        </div>
       </template>
       <div>test default2</div>
       <template #footer>
@@ -34,7 +50,7 @@
 
 <script lang="ts">
 
-import { reactive, ref } from 'vue';
+import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
 import MyComp from './components/my-comp';
 import NoSetup from './components/no-setup.vue';
@@ -57,17 +73,22 @@ export default {
     }
     const insetup = ref(2);
     console.log('insetup', insetup);
-    // @ts-ignore
     console.log('insetup', insetup.value);
+
+    const kkk = 'abc';
+    console.log('kkk', kkk);
+    
+    function fn(str: string) {
+      console.log(str);
+    }
     return {
       abc,
       insetup,
+      fn,
     }
   },
   mounted() {
-    // @ts-ignore
     console.log('zenchen', this.insetup);
-    // @ts-ignore
     console.log('zenchen', this.insetup.value);
   }
 }

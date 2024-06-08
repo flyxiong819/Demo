@@ -6,15 +6,15 @@ const app = createApp(App);
 app.mount('#app')
 
 
-app.component('my-comp', {
-  template: `
-    <div> my Name: {{name}} </div>
-  `,
+app.component('MyComp', {
   data() {
     return {
       name: 'zenchen',
     };
   },
+  template: `
+    <div> my Name: {{name}} </div>
+  `,
 })
 
 
