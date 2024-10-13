@@ -1,5 +1,6 @@
 
 <template>
+  <MeasDemo />
   <div>
     <img
       alt="Vue logo"
@@ -57,6 +58,7 @@ import NoSetup from './components/no-setup.vue';
 import Vmodel from './components/vmodel.vue';
 import Attrs from './components/attrs.vue';
 import Vslot from './components/vslot.vue';
+import { MeasDemo } from '@sicarrier/measweb-ui';
 
 export default {
   components: {
@@ -66,6 +68,7 @@ export default {
     Vmodel,
     Attrs,
     Vslot,
+    MeasDemo,
   },
   setup() {
     const abc = () => {

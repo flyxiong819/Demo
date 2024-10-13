@@ -1,0 +1,17 @@
+sdk:
+  - node-v12.21.0
+dist:
+  default: # UI
+    - tmp/ui/*
+  cdn: # CDN
+    - tmp/cdn/*
+scripts: "export PATH=/opt/node-v14.16.0-linux-x64/bin:$PATH && yarn install && yarn add @tencent/ppdweb-cli@beta --dev && echo '{\"private-token\": \"8lYcpGUyMG4uftQV3AUp\"}'>~/.gitoarc && export ppd_user=$USER && npx pw zip --config '{\"basePath\":\"/\"}'"
+
+fit_build_env_var:
+  bucket: hkwallet-static-1258344698
+  cos_domain: cos-internal.ap-hongkong.tencentcos.cn
+  local_path: ${FIT_MODULE}_${FIT_CI_BUILD_VERSION}_cdn/main/htdocs/
+  cos_path: /
+  cdn_domain: https://st.moneydata.hk
+  sercret_key: ${settings.cdg_fit_wphk_hkid.appId}
+  sercret_value: ${settings.cdg_fit_wphk_hkid.secretKey}

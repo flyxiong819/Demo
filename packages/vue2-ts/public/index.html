@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" name="viewport"/>
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title></title>
+    <script>
+      window.__ProjectName = '<%=htmlWebpackPlugin.options.projectName%>';
+    </script>
+    <script type="text/javascript">
+      window.__$$_pageStartTime = new Date().getTime(); // 用于计算页渲染时间
+
+      //为了兼容旧的上报，这里得加上window.G_speedPointTime;
+      //加上window.onerror上报，为啥在这里加，有时候根本走不到main.js就报错了，比如ios8低版本报错，就能通过这个上报进行兜底
+      window.G_speedPointTime = [];
+      window.G_speedPointTime[0] = new Date().getTime();
+      var __$$__decodeHTML=function(){function e(e,t,r){return void 0===e?"undefined":null===e?"null":e.toString().replace(t,r)}function t(t){return e(t,/</g,"&lt;")}function r(e){return e.replace(p,function(e,t){return l.hasOwnProperty(t)?l[t]:e})}function n(e){var t=!1;try{JSON.parse(e),t=!0}catch(e){t=!1}return t}function a(e){try{var r="",a="";try{r=decodeURIComponent(e);try{r!==e&&decodeURIComponent(r)!==r&&((new Image).src="https://hkwallet.moneydata.hk/fcgi-bin/app/ewallet_bindcard/ewallet_elk_report.fcgi?nodeType=ppd_web_hkwallet&key=CGI_xssFilterError&msg=muti_decodeURI_"+encodeURIComponent(e))}catch(e){}}catch(t){r=e,(new Image).src="https://hkwallet.moneydata.hk/fcgi-bin/app/ewallet_bindcard/ewallet_elk_report.fcgi?nodeType=ppd_web_hkwallet&key=CGI_xssFilterError&msg=decodeURI_catch_"+encodeURIComponent(t.message)}return(a=t(r))===r?e:((new Image).src="https://hkwallet.moneydata.hk/fcgi-bin/app/ewallet_bindcard/ewallet_elk_report.fcgi?nodeType=ppd_web_hkwallet&key=CGI_xssFilterError&msg=xss_filter_data_"+encodeURIComponent(e),r!==e&&(a=encodeURIComponent(a),n(e)&&!n(a)&&(a=t(e),(new Image).src="https://hkwallet.moneydata.hk/fcgi-bin/app/ewallet_bindcard/ewallet_elk_report.fcgi?nodeType=ppd_web_hkwallet&key=CGI_xssFilterError&msg=parse_json_error_"+encodeURIComponent(e))),a)}catch(r){return(new Image).src="https://hkwallet.moneydata.hk/fcgi-bin/app/ewallet_bindcard/ewallet_elk_report.fcgi?nodeType=ppd_web_hkwallet&key=CGI_xssFilterError&msg=outer_catch_"+encodeURIComponent(r.message),t(e)}return e}function o(e){switch(typeof e){case"object":for(var t in e)e.hasOwnProperty(t)&&(e[t]=o(e[t]));return e;case"string":var n=r(e);return n=a(n);default:return e}}function c(e){var t=o(e);return"test".match(/test/),t}var l={amp:"&","#39":"'",lt:"<",gt:">",quot:'"'},p=/&([a-z#\d]+);/g;return{decode:c}}();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but template doesn't work properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

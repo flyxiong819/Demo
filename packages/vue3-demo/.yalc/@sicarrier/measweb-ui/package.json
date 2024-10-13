@@ -1,0 +1,20 @@
+{
+  "name": "@sicarrier/measweb-ui",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "type-check": "vue-tsc --build --force",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "less": "^4.2.0",
+    "vue-demi": "^0.14.10"
+  },
+  "peerDependencies": {
+    "vue": "*"
+  },
+  "yalcSig": "9cce3602b64935c6b2cf2ae766651224"
+}

@@ -1,0 +1,63 @@
+<html>
+  <style>
+
+  </style>
+  <body>
+    <canvas id="canvas" width="300" height="227"></canvas>
+    <canvas id="zoom" width="300" height="227"></canvas>
+    <div>
+      <label for="smoothbtn">
+        <input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn" />
+        Enable image smoothing
+      </label>
+    </div>
+
+  </body>
+
+  <script>
+    
+    var img = new Image();
+img.src = "rhino.jpg";
+img.onload = function () {
+  draw(this);
+};
+
+function draw(img) {
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  ctx.drawImage(img, 0, 0);
+  img.style.display = "none";
+  var zoomctx = document.getElementById("zoom").getContext("2d");
+
+  var smoothbtn = document.getElementById("smoothbtn");
+  var toggleSmoothing = function (event) {
+    zoomctx.imageSmoothingEnabled = this.checked;
+    zoomctx.mozImageSmoothingEnabled = this.checked;
+    zoomctx.webkitImageSmoothingEnabled = this.checked;
+    zoomctx.msImageSmoothingEnabled = this.checked;
+  };
+  smoothbtn.addEventListener("change", toggleSmoothing);
+
+  var zoom = function (event) {
+    var x = event.layerX;
+    var y = event.layerY;
+    zoomctx.drawImage(
+      canvas,
+      Math.abs(x - 50),
+      Math.abs(y - 50),
+      100,
+      100,
+      0,
+      0,
+      200,
+      200,
+    );
+  };
+
+  canvas.addEventListener("mousemove", zoom);
+}
+
+
+
+  </script>
+</html>

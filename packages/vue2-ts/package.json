@@ -1,0 +1,94 @@
+{
+  "name": "utilities",
+  "cnname": "生活缴费",
+  "version": "0.1.3",
+  "description": "",
+  "author": "zenchen <zenchen@tencent.com>",
+  "private": true,
+  "scripts": {
+    "serve": "APP_ENV=development vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:sentry": "vue-cli-service build --UploadSentry",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit",
+    "test:unit:watch": "vue-cli-service test:unit --watch",
+    "test:e2e": "vue-cli-service test:e2e",
+    "release": "standard-version",
+    "commit": "npx git cz",
+    "tran:push": "traduora import -f ./src/i18n/zh-cn/main.json -l zh_CN && traduora import -f ./src/i18n/zh-hk/main.json -l zh_HK && traduora import -f ./src/i18n/en/main.json -l en",
+    "tran:pull": "traduora export -d ./src/i18n/zh-cn/main.json -l zh_CN && traduora export -d ./src/i18n/zh-hk/main.json -l zh_HK && traduora export -d ./src/i18n/en/main.json -l en",
+    "scan": "i18next-scanner --config i18next-scanner.config.js"
+  },
+  "dependencies": {
+    "@vue/composition-api": "^1.7.1",
+    "@vueuse/core": "^9.3.0",
+    "async-validator": "^3.2.3",
+    "axios": "^0.21.1",
+    "core-js": "3",
+    "dayjs": "^1.11.3",
+    "html2canvas": "v1.0.0-alpha.12",
+    "i18next-scanner": "2.x",
+    "lottie-web": "^5.5.10",
+    "md5": "^2.2.1",
+    "raven-js": "^3.27.2",
+    "swiper": "^8.3.2",
+    "vue": "^2.5.22",
+    "vue-property-decorator": "^8.3.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "vuex-class": "^0.3.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.13.12",
+    "@commitlint/cli": "^8.2.0",
+    "@types/jest": "^23.1.4",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "@vue/cli-plugin-babel": "5",
+    "@vue/cli-plugin-typescript": "^3.0.1",
+    "@vue/cli-plugin-unit-jest": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "7.0.0-bridge.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "commitizen": "^4.0.3",
+    "eslint": "^7.31.0",
+    "eslint-plugin-vue": "^7.15.0",
+    "husky": "^3.0.7",
+    "jest": "^23.6.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^8.1.5",
+    "mini-css-extract-plugin": "^0.5.0",
+    "miniprogram-api-typings": "^2.7.7",
+    "mp-webpack-plugin": "latest",
+    "node-watch": "^0.6.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-rem2rpx": "^1.0.1",
+    "shelljs": "^0.8.3",
+    "standard-version": "^7.0.0",
+    "ts-jest": "^23.0.0",
+    "typescript": "^4.8.4",
+    "vue-eslint-parser": "^7.6.0",
+    "vue-template-compiler": "^2.5.21",
+    "webpack-cli": "^3.3.6"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

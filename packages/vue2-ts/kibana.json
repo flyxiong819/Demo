@@ -1,0 +1,55 @@
+{
+  "business": "hkwallet",
+  "template": "default",
+  "projects": [
+    {
+      "channel": "utilities",
+      "name": "生活缴费",
+      "description": "生活缴费业务监控视图",
+      "author": "zenchen <zenchen@tencent.com>",
+      "interfaces": [
+        {
+          "key": "ia_utilities_qry_bill_info.cgi",
+          "name": ""
+        },
+        {
+          "key": "ia_utilities_qry_jsapi_param.cgi",
+          "name": "jsapi初始化参数"
+        },
+        {
+          "key": "ia_utilities_ins_order.cgi",
+          "name": "下单（重要）"
+        },
+        {
+          "key": "ia_utilities_qry_order_detail.cgi",
+          "name": "缴费详情"
+        },
+        {
+          "key": "ia_utilities_qry_account_detail.cgi",
+          "name": "账号详情"
+        },
+        {
+          "key": "ia_utilities_qry_order_list.cgi",
+          "name": "缴费记录列表"
+        },
+        {
+          "key": "ia_utilities_ins_account.cgi",
+          "name": "添加账号"
+        },
+        {
+          "key": "ia_utilities_upt_account_info.cgi",
+          "name": "更新账号"
+        },
+        {
+          "key": "ia_utilities_qry_bill.cgi",
+          "name": "查询账单"
+        },
+        {
+          "key": "ia_utilities_qry_account_list.cgi",
+          "name": "查询账户列表"
+        }
+      ],
+      "dashboardUrl": "http://es.ipd.woa.com/app/kibana#/dashboard/09ec8cd0-1441-11ec-bfe0-a52a9952396c"
+    }
+  ]
+}

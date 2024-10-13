@@ -16,6 +16,8 @@ const createWindow = () => {
 
   // 加载 index.html
   mainWindow.loadURL('http://localhost:8899');
+
+  console.log('chenzengxiong', mainWindow.webContents);
   // 打开开发工具
   mainWindow.webContents.openDevTools()
 }

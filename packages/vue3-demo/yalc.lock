@@ -1,0 +1,8 @@
+{
+  "version": "v1",
+  "packages": {
+    "@sicarrier/measweb-ui": {
+      "signature": "9cce3602b64935c6b2cf2ae766651224"
+    }
+  }
+}

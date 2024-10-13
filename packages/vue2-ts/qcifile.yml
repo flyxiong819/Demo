@@ -1,0 +1,44 @@
+version: 1.0                            # QCIFile版本号，自己指定
+worker:
+  label: ${label}
+stages:
+  - stage: 安装依赖
+    cmds:
+      - export http_proxy=''
+      - tnpm i
+  - stage: 执行测试用例
+    cmds:
+      - tnpm run test:unit
+  - stage: 编译
+    cmds:
+      - pw build
+  - stage: 发布到dev
+    if: $target == dev
+    cmds:
+      - pw d2d --skipBuild
+  - stage: 发布到测试环境
+    if: $target == test
+    tasks:
+      - task: 提交release仓库并建单
+        if: $skipReq is false
+        cmds:
+          - pw publish -b ${QCI_BRANCH} --skipBuild --tapd ${tapd} --creator ${creator} --config {\"global\":{\"mode\":\"quiet\"}}
+        status:
+          ./qciBuild.json
+      - task: 提交release仓库
+        if: $skipReq is true
+        cmds:
+          - pw publish -b ${QCI_BRANCH} --skipBuild --skipReq --tapd ${tapd} --creator ${creator} --config {\"global\":{\"mode\":\"quiet\"}}
+  - stage: 发布到正式环境
+    if: $target == idc
+    tasks:
+      - task: 提交release仓库并建单
+        if: $skipReq is false
+        cmds:
+          - pw publish -b ${QCI_BRANCH} --skipBuild --tapd ${tapd} --creator ${creator} --config {\"global\":{\"mode\":\"quiet\"}}
+        status:
+          ./qciBuild.json
+      - task: 提交release仓库
+        if: $skipReq is true
+        cmds:
+          - pw publish -b ${QCI_BRANCH} --skipBuild --skipReq --tapd ${tapd} --creator ${creator} --config {\"global\":{\"mode\":\"quiet\"}}
